@@ -33,7 +33,7 @@ class Binary2DecimalTest {
     }
     @Test
     public void TestConversionAllBinaries() {
-        Binary2Decimal binaryConverter = new Binary2Decimal("1010", "1111", "10000");
-        Assertions.assertArrayEquals(new long[]{10, 15, 16}, binaryConverter.convertAllToDecimal());
+        Binary2Decimal binaryConverter = new Binary2Decimal("1010", "1111", "10000", "111101111111111111111111111111111111011111111111111011111111011", "101011110");
+        Assertions.assertArrayEquals(new long[]{10, 15, 16, 8935141660635953147L, 350}, binaryConverter.convertAllToDecimal());
     }
 }
