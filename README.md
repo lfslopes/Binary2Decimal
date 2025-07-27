@@ -1,0 +1,2 @@
+# Binary to Decimal converter
+This project is a simple script to convert a binary number to its decimal equivalent. This is one of some challenges to pratice programming skills and can be founded on the GitHub repository [App Ideas](https://github.com/florinpop17/app-ideas/).
