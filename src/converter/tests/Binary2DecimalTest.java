@@ -6,13 +6,19 @@ import org.junit.jupiter.api.Test;
 
 class Binary2DecimalTest {
     /**
+     * This method is used to execute the Binary2Decimal constructor with invalid binary numbers.
+     * It will throw a BinaryException if the binary numbers are not valid.
+     */
+    private static void execute() {
+        new Binary2Decimal("1010", "1112", "10000", "210 44");
+    }
+
+    /**
      * This test checks if the Binary2Decimal class throws a BinaryException when invalid binary numbers are provided to the list.
      */
     @Test
     public void testInvalidBinaries() {
-        Assertions.assertThrows(converter.implementation.BinaryException.class, () -> {
-            new Binary2Decimal("1010", "1112", "10000");
-        });
+        Assertions.assertThrows(converter.implementation.BinaryException.class, Binary2DecimalTest::execute);
     }
     /**
      * Test to check if the Binary2Decimal class can convert valid binary numbers to decimal.
