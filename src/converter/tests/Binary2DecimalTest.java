@@ -1,10 +1,10 @@
 package converter.tests;
 
 import converter.implementation.Binary2Decimal;
+import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
-class Binary2DecimalTest {
+public class Binary2DecimalTest {
     /**
      * This method is used to execute the Binary2Decimal constructor with invalid binary numbers.
      * It will throw a BinaryException if the binary numbers are not valid.
@@ -35,5 +35,12 @@ class Binary2DecimalTest {
     public void TestConversionAllBinaries() {
         Binary2Decimal binaryConverter = new Binary2Decimal("1010", "1111", "10000", "111101111111111111111111111111111111011111111111111011111111011", "101011110");
         Assertions.assertArrayEquals(new long[]{10, 15, 16, 8935141660635953147L, 350}, binaryConverter.convertAllToDecimal());
+    }
+    @Test
+    public void TestIsBinary() {
+        Binary2Decimal binary = new Binary2Decimal("10101", "1111111111100001011000011110010");
+        Assertions.assertTrue(binary.isBinary("10101"));
+        Assertions.assertFalse(binary.isBinary("532352"));
+        Assertions.assertTrue(binary.isBinary("1111111111100001011000011110010"));
     }
 }

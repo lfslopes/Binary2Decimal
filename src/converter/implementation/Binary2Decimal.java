@@ -39,6 +39,9 @@ public class Binary2Decimal{
             throw new BinaryException("Binary number must consist of only 0s and 1s.");
         }
     }
+    public boolean isBinary(String binary) {
+        return binary.matches(BINARY_REGEX);
+    }
     /**
      * Just a getter to return one of the binary numbers in the list.
      * @param index It's the index of the binary number in the list. It must be a valid index, otherwise an IndexOutOfBoundsException will be thrown.
